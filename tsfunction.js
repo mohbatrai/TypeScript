@@ -1,4 +1,3 @@
-
 /*
 function show(song : string)
 {
@@ -30,14 +29,14 @@ console.log("The average of the given number is = "+getAverage(10,20,30));
 
 function Job(title : string, ...person:string[])
 {
-    return person.join(", ")+" are "+title;    
+    return person.join(", ")+" are "+title;
 }
 console.log(Job("Software Engineer","ali","Jhon","Michle","Smith"));
 
 // rest parameter must be used as a last parameter of function
 function Job( ...person:string[],title : string)
 {
-    return person.join(", ")+" are "+title;    
+    return person.join(", ")+" are "+title;
 }
 
 console.log(Job("Jhon","Michle","Smith","Software Engineer","ali",));
@@ -98,7 +97,7 @@ function filter(num:number[],cbOdd) {
 }
 
 var output:number[]=filter([1,2,3,4,5,6,7,8,9,10,11,13,15],getEven);
-console.log(output); 
+console.log(output);
 
 // Function return Types : Every function in implicitly returns "undefined" unless you explicitly specify a return value.
 function say(messgae:string)
@@ -108,7 +107,7 @@ function say(messgae:string)
 }
 
 let msg = say("Welcome to undefined return Type");
-console.log("Result: "+msg); 
+console.log("Result: "+msg);
 
 function say(a: number,b:number) : string |number
 {
@@ -118,7 +117,7 @@ function say(a: number,b:number) : string |number
     return a+" + "+b+" = "+(a+b);
 }
 
-console.log(`Result = `+say(5,12));  
+console.log(`Result = `+say(5,12));
 
 
 //Optional Parameters:The parameters that may or may not receive a value can be appended with a '?' to mark them as optional.
@@ -131,7 +130,7 @@ function add()
 {
     let sum:number =0;
     for(let a:number=0; a<arguments.length; a++)
-    {   
+    {
         sum +=arguments[a];
     }
 
@@ -167,13 +166,13 @@ console.table(product);
 
 //Anonymous Function:the function itself does not have a name and it is one which has defined as an expression
 
-Anonymous(function as a value)			                    	Normal 
+Anonymous(function as a value)			                    	Normal
 -does not have any name associated with it		    --It has the particular nam
 --is not accessible after its initial creation, 	--It cab be access directly by calling the function name
-  it can only be accessed by a variable it is 
-  stored in as a function as a value.		
---It is useful for creating IIFE			        --This function is useful for all scenarios. 	
- (Immediately Invoked Function Expression).			
+  it can only be accessed by a variable it is
+  stored in as a function as a value.
+--It is useful for creating IIFE			        --This function is useful for all scenarios.
+ (Immediately Invoked Function Expression).
 --It is not hoisted function				        --it is hoisted function
 
 //syntax    (function() { ...code });
@@ -209,7 +208,7 @@ let nums  = (function (num:number[]) {
     }
     return vRes;
 })
-console.log(nums([1,2,3,4,5,6,7,8,9,10])); 
+console.log(nums([1,2,3,4,5,6,7,8,9,10]));
 
 
 let pNum= (function(num:number){
@@ -223,11 +222,11 @@ let pNum= (function(num:number){
                 counter++;
         }
         if(counter===2)
-        oRes.push(i);  
+        oRes.push(i);
     }
     return oRes;
 })
-console.log(pNum(100)); 
+console.log(pNum(100));
 
 
 let pStar= (num:number)=>{
@@ -244,7 +243,7 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10)); 
+console.log(pStar(10));
 
 
 let pStar= (num:number)=>{
@@ -261,14 +260,14 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10)); 
+console.log(pStar(10));
 
 
 let pStar= (num:number)=>{
     let str="\n";
     for(let i=num;i>0; i--)
     {
-        //sapce 
+        //sapce
         for(let j=0; j<num-i; j++)
         {
         str+=" ";
@@ -284,13 +283,13 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10)); 
+console.log(pStar(10));
 
 let pStar= (num:number)=>{
     let str="\n";
     for(let i=num;i>0; i--)
     {
-        //sapce 
+        //sapce
         for(let j=0; j<num-i; j++)  // n-i
         {
         str+=" ";
@@ -306,14 +305,14 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10));  
+console.log(pStar(10));
 
 
 let pStar= (num:number)=>{
     let str="\n";
     for(let i=0;i<num; i++)
     {
-        //sapce 
+        //sapce
         for(let j=0; j<num-i; j++)  // n-i
         {
         str+=" ";
@@ -322,46 +321,38 @@ let pStar= (num:number)=>{
         {
         str+="*";
         }
-        str+="\n";        
+        str+="\n";
     }
     return str;
 }
 
 console.log(pStar(10)); */
-
-
-let pStar= (num:number)=>{
-    let str="\n";
-    for(let i=0;i<num; i++)
-    {
+var pStar = function (num) {
+    var str = "\n";
+    for (var i = 0; i < num; i++) {
         //sapce 
-        for(let j=0; j<num-i; j++)  // n-i
-        {
-        str+=" ";
+        for (var j = 0; j < num - i; j++) // n-i
+         {
+            str += " ";
         }
-        for(let j=0; j< 2*i-1; j++) // 2*i-1
-        {
-        str+="*";
+        for (var j = 0; j < 2 * i - 1; j++) // 2*i-1
+         {
+            str += "*";
         }
-        str+="\n";        
+        str += "\n";
     }
-    for(let i=num;i>0; i--)
-    {
+    for (var i = num; i > 0; i--) {
         //sapce 
-        for(let j=0; j<num-i; j++)  // n-i
-        {
-        str+=" ";
+        for (var j = 0; j < num - i; j++) // n-i
+         {
+            str += " ";
         }
-
-        for(let j=0; j< 2*i-1; j++) // 2*i-1
-        {
-        str+="*";
+        for (var j = 0; j < 2 * i - 1; j++) // 2*i-1
+         {
+            str += "*";
         }
-        str+="\n";
-        
+        str += "\n";
     }
-
     return str;
-}
-
+};
 console.log(pStar(10));
