@@ -15,8 +15,8 @@ function add()
 console.log(add(10,20,40));  */
 
 
-debugger 
-var x=10;
+
+/*var x=10;
 
 function getName()
 {
@@ -26,4 +26,24 @@ function getName()
 // Memory allocated to all 
 getName();
 console.log(x);
-console.log(getName);
+console.log(getName); */
+
+
+debugger 
+let fname = "Alisha";
+let lname = "khan";
+
+
+ // ternary operator ( condition ?true :false)
+// Ternary Operator
+//The ternary operator is a simplified conditional operator like if / else.
+//Syntax: condition ? <expression if true> : <expression if false></expression>
+
+let rv=Math.random()>0.4?"Condition true executed":"condition false executed" ;
+
+console.log(rv);
+/*
+if(rv>0.05)
+    console.log(fname);
+else
+    console.log(lname); */
