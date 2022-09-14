@@ -327,7 +327,7 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10)); */
+console.log(pStar(10)); 
 
 
 let pStar= (num:number)=>{
@@ -364,4 +364,4 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10));
+console.log(pStar(10)); */
