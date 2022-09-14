@@ -75,7 +75,7 @@ function preetyPrint(val:string)
 
 add(4,5,preetyPrint);
 
-*/
+
 function getOdd(num:number)
 {
  return num % 2 !=0;
@@ -98,4 +98,47 @@ function filter(num:number[],cbOdd) {
 }
 
 var output:number[]=filter([1,2,3,4,5,6,7,8,9,10,11,13,15],getEven);
-console.log(output);
+console.log(output); 
+
+// Function return Types : Every function in implicitly returns "undefined" unless you explicitly specify a return value.
+function say(messgae:string)
+{
+    console.log( messgae);
+     return messgae;
+}
+
+let msg = say("Welcome to undefined return Type");
+console.log("Result: "+msg); 
+
+function say(a: number,b:number) : string |number
+{
+    if (a<10)
+   return a+b;
+   else
+    return a+" + "+b+" = "+(a+b);
+}
+
+console.log(`Result = `+say(5,12));  */
+
+
+//Optional Parameters:The parameters that may or may not receive a value can be appended with a '?' to mark them as optional.
+//Default Parameters :it must follow the required parameters in the function signature =
+//
+
+// The arguments object
+
+function add()
+{
+    let sum:number =0;
+    for(let a:number=0; a<arguments.length; a++)
+    {   
+        sum +=arguments[a];
+    }
+
+    return sum;
+}
+
+console.log(add(10,20,40));
+
+
+//Anonymous Function:the function itself does not have a name and it is one which has defined as an expression

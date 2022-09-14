@@ -74,21 +74,44 @@ function preetyPrint(val:string)
 
 add(4,5,preetyPrint);
 
-*/
-function getOdd(num) {
-    return num % 2 != 0;
+
+function getOdd(num:number)
+{
+ return num % 2 !=0;
 }
-function getEven(num) {
-    return num % 2 == 0;
+
+function getEven(num:number)
+{
+ return num % 2 ==0;
 }
-function filter(num, cbOdd) {
-    var res = [];
-    for (var _i = 0, num_1 = num; _i < num_1.length; _i++) {
-        var a = num_1[_i];
-        if (cbOdd(a))
-            res.push(a);
+
+function filter(num:number[],cbOdd) {
+    
+ let res:number[]=[];
+    for(var a of num)
+    {
+        if(cbOdd(a))
+        res.push(a);
     }
     return res;
 }
-var output = filter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15], getEven);
+
+var output:number[]=filter([1,2,3,4,5,6,7,8,9,10,11,13,15],getEven);
 console.log(output);
+
+// Function return Types : Every function in implicitly returns "undefined" unless you explicitly specify a return value.
+function say(messgae:string)
+{
+    console.log( messgae);
+     return messgae;
+}
+
+let msg = say("Welcome to undefined return Type");
+console.log("Result: "+msg); */
+function say(a, b) {
+    if (a < 10)
+        return a + b;
+    else
+        return a + " + " + b + " = " + (a + b);
+}
+console.log("Result = " + say(5, 12));
