@@ -1,4 +1,5 @@
 
+/*
 //The arguments object
 function add()
 {
@@ -11,4 +12,18 @@ function add()
     return sum;
 }
 
-console.log(add(10,20,40));
+console.log(add(10,20,40));  */
+
+
+debugger 
+var x=10;
+
+function getName()
+{
+    console.log("Javscript Hoisting...");
+}
+
+// Memory allocated to all 
+getName();
+console.log(x);
+console.log(getName);

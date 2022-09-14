@@ -118,7 +118,7 @@ function say(a: number,b:number) : string |number
     return a+" + "+b+" = "+(a+b);
 }
 
-console.log(`Result = `+say(5,12));  */
+console.log(`Result = `+say(5,12));  
 
 
 //Optional Parameters:The parameters that may or may not receive a value can be appended with a '?' to mark them as optional.
@@ -135,10 +135,15 @@ function add()
         sum +=arguments[a];
     }
 
-    return sum;
-}
+    return sum;}
 
-console.log(add(10,20,40));
+console.log(add(10,20,40)); // Typescript not supported argument Objects
+*/
+
+//hoisting :pronounce hoy-stuhng : The function hoisting allows you to call a function before declaring it.
+
+
 
 
 //Anonymous Function:the function itself does not have a name and it is one which has defined as an expression
+
