@@ -26,7 +26,7 @@ function getName()
 // Memory allocated to all 
 getName();
 console.log(x);
-console.log(getName); */
+console.log(getName); 
 
 
 debugger 
@@ -42,8 +42,10 @@ let lname = "khan";
 let rv=Math.random()>0.4?"Condition true executed":"condition false executed" ;
 
 console.log(rv);
-/*
+
 if(rv>0.05)
     console.log(fname);
 else
     console.log(lname); */
+
+    

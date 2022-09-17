@@ -326,33 +326,92 @@ let pStar= (num:number)=>{
     return str;
 }
 
-console.log(pStar(10)); */
-var pStar = function (num) {
-    var str = "\n";
-    for (var i = 0; i < num; i++) {
-        //sapce 
-        for (var j = 0; j < num - i; j++) // n-i
-         {
-            str += " ";
-        }
-        for (var j = 0; j < 2 * i - 1; j++) // 2*i-1
-         {
-            str += "*";
-        }
-        str += "\n";
-    }
-    for (var i = num; i > 0; i--) {
-        //sapce 
-        for (var j = 0; j < num - i; j++) // n-i
-         {
-            str += " ";
-        }
-        for (var j = 0; j < 2 * i - 1; j++) // 2*i-1
-         {
-            str += "*";
-        }
-        str += "\n";
-    }
-    return str;
-};
 console.log(pStar(10));
+
+
+let pStar= (num:number)=>{
+    let str="\n";
+    for(let i=0;i<num; i++)
+    {
+        //sapce
+        for(let j=0; j<num-i; j++)  // n-i
+        {
+        str+=" ";
+        }
+        for(let j=0; j< 2*i-1; j++) // 2*i-1
+        {
+        str+="*";
+        }
+        str+="\n";
+    }
+    for(let i=num;i>0; i--)
+    {
+        //sapce
+        for(let j=0; j<num-i; j++)  // n-i
+        {
+        str+=" ";
+        }
+
+        for(let j=0; j< 2*i-1; j++) // 2*i-1
+        {
+        str+="*";
+        }
+        str+="\n";
+        
+    }
+
+    return str;
+}
+
+console.log(pStar(10));
+
+
+
+// Never Returns
+
+function fail(msg:string):never
+{
+    throw new Error("Invalid format: "+msg);
+}
+
+function TypeCheck(param:unknown)
+{
+    if(typeof param !== "string")
+    fail("Paramater type string is not matching "+param)   ;
+}
+
+console.log(TypeCheck(2344));
+
+
+function myReturn()
+{
+  //  return true;
+}
+console.log(myReturn());
+
+function apiError(msg,code):never
+{
+    throw {message:msg,code:code}
+   // console.log("Hi this is never call ");
+   
+}
+
+//console.log(apiError("server side error",500));
+console.log(apiError("server not found",404));
+
+function add(a:string, b:string):string;
+function add(a:number, b:number): number;
+function add(a: any, b:any): any {
+    return a + b;
+}
+
+console.log(add("Hello ", "Steve")); // returns "Hello Steve"
+console.log(add(10, 20)); // returns 30
+
+*/
+function add(a, b) {
+    return a + b;
+}
+console.log(add("Tyescript", " Function Overload"));
+console.log(add(404, " Page wast not found."));
+console.log(add(44, 20));
