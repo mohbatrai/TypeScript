@@ -420,9 +420,9 @@ return a+b;
 }
 console.log(add("Tyescript"," Function Overload"));
 console.log(add(404," Page wast not found."));
-console.log(add(44,20)); */
+console.log(add(44,20)); 
 
 let tp:()=>string|number|undefined;
 
 
-console.log(tp);
+console.log(tp); */

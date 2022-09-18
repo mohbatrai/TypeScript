@@ -408,10 +408,20 @@ function add(a: any, b:any): any {
 console.log(add("Hello ", "Steve")); // returns "Hello Steve"
 console.log(add(10, 20)); // returns 30
 
-*/
-function add(a, b) {
-    return a + b;
+
+
+function add(a:string, b:string): void;
+function add(a:number, b:number): number;
+function add(a:number, b:string): number;
+function add(a, b): any
+{
+return a+b;
 }
-console.log(add("Tyescript", " Function Overload"));
-console.log(add(404, " Page wast not found."));
-console.log(add(44, 20));
+console.log(add("Tyescript"," Function Overload"));
+console.log(add(404," Page wast not found."));
+console.log(add(44,20));
+
+let tp:()=>string|number|undefined;
+
+
+console.log(tp); */ 

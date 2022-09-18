@@ -129,7 +129,7 @@ let op= Math.random()>0.05
 //op.pages=44;
 //op.ryhme=false;
 console.log(op);
-*/
+
 
 type car ={
     model:string,
@@ -164,4 +164,4 @@ function show(val1:honda)
     console.log(val1);
 }
 
-console.log (cd1);
+console.log (cd1); */

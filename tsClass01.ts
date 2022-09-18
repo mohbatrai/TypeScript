@@ -46,7 +46,7 @@ vname.length();
 
 let vnum = 44;
 vnum.toFixed();
-vnum.toUpperCase(); */
+vnum.toUpperCase(); 
 
 // console.log(Math.random()>0.05 ?"hello":"World"); 
 
@@ -61,4 +61,4 @@ vnum.toUpperCase(); */
     let vname = "typescript";
 
     //with annotation declaration and assigning 
-    let lname:string = "typescript";
+    let lname:string = "typescript"; */
